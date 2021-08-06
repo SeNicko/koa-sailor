@@ -21,31 +21,31 @@ import { Context } from 'koa';
 import { createApp, Controller, Get } from 'koa-sailor';
 
 @Controller({
-	path: '/users'
+  path: '/users'
 })
 class UsersController {
-	@Get({
-		path: '/:id'
-	})
-	async getUser(ctx: Context) {
-		// ...
-	}
+  @Get({
+    path: '/:id'
+  })
+  async getUser(ctx: Context) {
+    // ...
+  }
 
-	@Delete({
-		path: '/:id',
-		middlewares: [requireAuth]
-	})
-	async deleteUser(ctx: Context) {
-		// ...
-	}
+  @Delete({
+    path: '/:id',
+    middlewares: [requireAuth]
+  })
+  async deleteUser(ctx: Context) {
+    // ...
+  }
 }
 
 const app = createApp({
-	controllers: [UsersController]
+  controllers: [UsersController]
 });
 
 app.listen(5000, () => {
-	console.log('app listening on port 5000');
+  console.log('app listening on port 5000');
 });
 ```
 
@@ -67,13 +67,13 @@ import logger from 'koa-logger';
 import UserController from './controllers/user';
 
 const app = createApp({
-	controllers: [UserController],
-	middlewares: [logger]
+  controllers: [UserController],
+  middlewares: [logger]
 });
 
 app.use((ctx, next) => {
-	console.log('I am doing nothing! 🍾');
-	next();
+  console.log('I am doing nothing! 🍾');
+  next();
 });
 
 app.listen();
@@ -92,8 +92,8 @@ Example usage:
 import { Controller } from 'koa-sailor';
 
 @Controller({
-	path: '/your/path',
-	midlewares: [requireAuth]
+  path: '/your/path',
+  midlewares: [requireAuth]
 })
 class YourAmazingController {}
 ```
@@ -112,16 +112,16 @@ import { Context } from 'koa';
 import { Controller, Get } from 'koa-sailor';
 
 @Controller({
-	path: '/orders'
+  path: '/orders'
 })
 class YourController {
-	@Get({
-		// path is '/' by default!
-		middlewares: [requireAuth]
-	})
-	async listOrders(ctx: Context) {
-		// ...
-	}
+  @Get({
+    // path is '/' by default!
+    middlewares: [requireAuth]
+  })
+  async listOrders(ctx: Context) {
+    // ...
+  }
 }
 ```
 

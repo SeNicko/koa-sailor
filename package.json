@@ -1,38 +1,38 @@
 {
-	"name": "koa-sailor",
-	"version": "1.0.0",
-	"description": "Decorators for creating koa controllers. Easier.",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
-	"scripts": {
-		"build": "tsc -p tsconfig.prod.json",
-		"test": "jest tests/*.spec.ts"
-	},
-	"author": "Sebastian Flajszer",
-	"license": "MIT",
-	"keywords": [
-		"koa",
-		"decorators",
-		"http decorators",
-		"koa-controllers",
-		"koa-decorators",
-		"koa-router-decorators",
-		"koa-router",
-		"@koa/router",
-		"express-decorators"
-	],
-	"dependencies": {
-		"@koa/router": "^10.1.0",
-		"koa": "^2.13.1",
-		"reflect-metadata": "^0.1.13"
-	},
-	"devDependencies": {
-		"@types/jest": "^26.0.24",
-		"@types/koa": "^2.13.4",
-		"@types/koa__router": "^8.0.7",
-		"@types/node": "^16.4.10",
-		"jest": "^27.0.6",
-		"ts-jest": "^27.0.4",
-		"typescript": "^4.3.5"
-	}
+  "name": "koa-sailor",
+  "version": "1.0.0",
+  "description": "git ",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.prod.json",
+    "test": "jest tests/*.spec.ts"
+  },
+  "author": "Sebastian Flajszer",
+  "license": "MIT",
+  "keywords": [
+    "koa",
+    "decorators",
+    "http decorators",
+    "koa-controllers",
+    "koa-decorators",
+    "koa-router-decorators",
+    "koa-router",
+    "@koa/router",
+    "express-decorators"
+  ],
+  "dependencies": {
+    "@koa/router": "^10.1.0",
+    "koa": "^2.13.1",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/koa": "^2.13.4",
+    "@types/koa__router": "^8.0.7",
+    "@types/node": "^16.4.10",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.4",
+    "typescript": "^4.3.5"
+  }
 }
