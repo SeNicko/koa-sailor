@@ -8,6 +8,10 @@
     "build": "tsc -p tsconfig.prod.json",
     "test": "jest tests/*.spec.ts"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SeNicko/koa-sailor"
+  },
   "author": "Sebastian Flajszer",
   "license": "MIT",
   "keywords": [
