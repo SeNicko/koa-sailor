@@ -1,7 +1,7 @@
 {
   "name": "koa-sailor",
-  "version": "1.0.1",
-  "description": "git ",
+  "version": "1.0.2",
+  "description": "koa-sailor is a simple and lightweight package for writing koa controllers faster.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
