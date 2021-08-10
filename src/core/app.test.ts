@@ -16,7 +16,7 @@ test('creates app properly', () => {
   }
 
   const app = createApp({
-    controllers: [Test],
+    controllers: [new Test()],
     middlewares: [() => {}]
   });
 

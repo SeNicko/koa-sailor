@@ -18,7 +18,7 @@ Example app using `koa-sailor`.
 
 ```ts
 import { Context } from 'koa';
-import { createApp, Controller, Get } from 'koa-sailor';
+import { createApp, Controller, Get, Delete } from 'koa-sailor';
 
 @Controller({
   path: '/users'
@@ -41,7 +41,7 @@ class UsersController {
 }
 
 const app = createApp({
-  controllers: [UsersController]
+  controllers: [new UsersController()]
 });
 
 app.listen(5000, () => {
@@ -67,7 +67,7 @@ import logger from 'koa-logger';
 import UserController from './controllers/user';
 
 const app = createApp({
-  controllers: [UserController],
+  controllers: [new UserController()],
   middlewares: [logger]
 });
 
