@@ -21,13 +21,11 @@ export const createApp = ({ controllers = [], middlewares = [], ...options }: Ap
 
   controllers.forEach(controller => {
     const controllerPath: string = Reflect.getMetadata('path', controller.constructor);
-
+    const controllerRoutes: Route[] = Reflect.getMetadata('routes', controller.constructor);
     const controllerMiddlewares: Middleware[] = Reflect.getMetadata(
       'middlewares',
       controller.constructor
     );
-
-    const controllerRoutes: Route[] = Reflect.getMetadata('routes', controller.constructor);
 
     const router = new Router({
       prefix: controllerPath
@@ -36,6 +34,7 @@ export const createApp = ({ controllers = [], middlewares = [], ...options }: Ap
     router.use(...controllerMiddlewares);
 
     controllerRoutes.forEach(({ path, method, handler, middlewares }) => {
+      console.log(path);
       router[method](path, ...middlewares, handler.bind(controller));
     });
 
