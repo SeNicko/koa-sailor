@@ -34,7 +34,6 @@ export const createApp = ({ controllers = [], middlewares = [], ...options }: Ap
     router.use(...controllerMiddlewares);
 
     controllerRoutes.forEach(({ path, method, handler, middlewares }) => {
-      console.log(path);
       router[method](path, ...middlewares, handler.bind(controller));
     });
 
