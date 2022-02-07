@@ -72,7 +72,7 @@ const app = createApp({
 });
 
 app.use((ctx, next) => {
-  console.log('Hello, fellas 🦥');
+  console.log('Hello, World 🌍');
   next();
 });
 
